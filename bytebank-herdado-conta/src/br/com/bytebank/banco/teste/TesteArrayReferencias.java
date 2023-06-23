@@ -12,6 +12,8 @@ public class TesteArrayReferencias {
 		Conta[] contas2 = new Conta[5];
 		Object[] contas3 = new Object[5];
 		
+		System.out.println(contas3.length);
+		
 		ContaCorrente c1 = new ContaCorrente(22, 33);
 		ContaCorrente c2 = new ContaCorrente(44, 55);
 		ContaPoupanca c3 = new ContaPoupanca(66, 77);
