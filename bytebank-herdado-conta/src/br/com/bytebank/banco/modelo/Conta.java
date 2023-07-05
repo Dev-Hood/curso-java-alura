@@ -10,7 +10,7 @@ package br.com.bytebank.banco.modelo;
  *
  */
 
-public abstract class Conta {
+public abstract class Conta extends Object {
 	protected double saldo;
 	//atributos privados só podem ser lidos e manipulados pelas classes de origem
 	private int agencia;
@@ -84,6 +84,21 @@ public abstract class Conta {
 	
 	public static int getTotal() {
 		return Conta.total;
+	}
+	
+	@Override
+	public boolean equals(Object ref) {
+		
+		Conta outra = (Conta)ref;
+		
+		if(this.agencia != outra.agencia) {
+			return false;
+		}
+		if(this.numero != outra.numero) {
+			return false;
+		}
+		
+		return true;
 	}
 	
 	@Override
